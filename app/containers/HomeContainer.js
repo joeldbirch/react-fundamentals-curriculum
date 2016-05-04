@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const HomeContainer = props => {
-	return (
-		<div className="home">Home view</div>
-	);
+  return (
+    <div className='home'>Home view</div>
+  )
 }
 
-module.exports = HomeContainer;
+module.exports = HomeContainer

@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import routes from './app/config/routes';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import routes from './app/config/routes'
 
-ReactDOM.render(routes, document.querySelector('#main'));
+ReactDOM.render(routes, document.querySelector('#main'))

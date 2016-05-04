@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Main = props => {
-	return (
-		<h1>Routing!</h1>
-	);
+  return (
+    <div>
+      <h1>Routing!</h1>
+    </div>
+  )
 }
 
-module.exports = Main;
+module.exports = Main
