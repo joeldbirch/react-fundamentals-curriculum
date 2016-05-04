@@ -1,10 +1,9 @@
 import React from 'react'
+import Home from '../components/Home'
 
 const HomeContainer = props => {
   return (
-    <div className='home'>
-      Home view
-    </div>
+    <Home />
   )
 }
 

@@ -1,9 +1,14 @@
 import React from 'react'
 
 const Main = props => {
+  const style = {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  }
+
   return (
-    <div>
-      <h1>Routing!</h1>
+    <div style={style}>
       {props.children}
     </div>
   )
