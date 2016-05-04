@@ -2,7 +2,9 @@ import React from 'react'
 
 const HomeContainer = props => {
   return (
-    <div className='home'>Home view</div>
+    <div className='home'>
+      Home view
+    </div>
   )
 }
 
