@@ -1,41 +1,33 @@
 import React from 'react'
-import TextField from './TextField'
-import ButtonContainer from '../containers/ButtonContainer'
+import Form from './Form'
 
 const Home = props => {
-  const wrapper = {
-    backgroundColor: '#FD7F37',
-    backgroundImage: "url('/app/images/pattern.svg')",
-    backgroundSize: 'cover',
-    color: 'white',
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'center'
-  }
+  const style = {
+    wrapper: {
+      backgroundColor: '#FD7F37',
+      backgroundImage: "url('/app/images/pattern.svg')",
+      backgroundSize: 'cover',
+      color: 'white',
+      display: 'flex',
+      flex: 1,
+      justifyContent: 'center'
+    },
 
-  const content = {
-    margin: 'auto',
-    textAlign: 'center'
-  }
+    content: {
+      margin: 'auto',
+      textAlign: 'center'
+    },
 
-  const formContent = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    form: {
+      transform: 'scaleX(.95)'
+    }
   }
 
   return (
-    <div style={wrapper}>
-      <div style={content}>
+    <div style={style.wrapper}>
+      <div style={style.content}>
         <h1 className='alpha'>{props.message}</h1>
-        <form>
-          <div style={formContent}>
-            <TextField placeholder='eg. Melbourne, Victoria' />
-            <ButtonContainer type='submit'>
-              Get Weather
-            </ButtonContainer>
-          </div>
-        </form>
+        <Form style={style.form} />
       </div>
     </div>
   )

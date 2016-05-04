@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './Header'
 
 const Main = props => {
   const style = {
@@ -9,6 +10,7 @@ const Main = props => {
 
   return (
     <div style={style}>
+      <Header />
       {props.children}
     </div>
   )

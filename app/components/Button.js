@@ -6,9 +6,9 @@ const Button = props => {
     border: '1px solid #4cae4c',
     borderRadius: '5px',
     color: 'white',
-    fontSize: 'small',
+    fontSize: '.875em',
     padding: '1ex 1em',
-    margin: '1ex .5em'
+    margin: '1ex .75em'
   }
 
   return (

@@ -3,10 +3,11 @@ import React from 'react'
 const TextField = props => {
   const style = {
     border: '1px solid lightgrey',
-    borderRadius: '3px',
-    fontSize: 'small',
+    borderRadius: '5px',
+    fontSize: '.875em',
     padding: '1ex .5em',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '12em'
   }
   return (
     <input
