@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
 	devtool: 'eval',
@@ -8,7 +9,7 @@ module.exports = {
 		'./index.js'
 	],
 	output: {
-		path: 'dist',
+		path: path.join(__dirname, 'dist'),
 		filename: 'bundle.js',
 		publicPath: '/static/'
 	},

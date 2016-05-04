@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import routes from './app/config/routes';
 
-const Hello = function(props) {
-	return (
-		<h1>Hello World</h1>
-	);
-}
-
-ReactDOM.render(<Hello />, '#main');
+ReactDOM.render(routes, document.querySelector('#main'));
