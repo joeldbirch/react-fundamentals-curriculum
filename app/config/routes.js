@@ -11,8 +11,4 @@ var routes = (
   </Router>
 )
 
-if (module.hot) {
-  module.hot.accept()
-}
-
 module.exports = routes
