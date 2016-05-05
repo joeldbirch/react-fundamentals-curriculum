@@ -1,12 +1,12 @@
-var webpack = require('webpack')
 var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
   devtool: 'eval',
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3000',
-    'webpack/hot/dev-server',
-    './index.js'
+    'webpack/hot/only-dev-server',
+    './app/index.js'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -20,8 +20,8 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ['react-hot', 'babel']
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'app')
       }
     ]
   }

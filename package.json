@@ -2,7 +2,7 @@
   "name": "react-fundamentals-curriculum",
   "version": "1.0.0",
   "description": "Curriculum for React.js Program's React Fundamentals course.",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "start": "npm run start:dev:hot",
     "start:dev": "webpack-dev-server --inline --content-base . --history-api-fallback",
