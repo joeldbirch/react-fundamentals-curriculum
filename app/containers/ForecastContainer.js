@@ -3,7 +3,7 @@ import api from '../helpers/api'
 import Forecast from '../components/Forecast'
 import Day from '../components/Day'
 
-export default class ForecastContainer extends Component {
+class ForecastContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -67,3 +67,5 @@ export default class ForecastContainer extends Component {
 ForecastContainer.contextTypes = {
   router: React.PropTypes.object.isRequired
 }
+
+export default ForecastContainer

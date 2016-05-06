@@ -1,4 +1,3 @@
-import React from 'react'
 import routes from '../config/routes'
 
 // If you use React Router, make this component

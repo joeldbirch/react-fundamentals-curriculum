@@ -1,19 +1,13 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Detail from '../components/Detail'
 
-export default class DetailContainer extends Component {
-  constructor (props) {
-    super(props)
-  }
-
-  render () {
-    console.log(this.props.location.state.weather)
-    return (
-      <Detail
-        title={this.props.routeParams.city}
-        data={this.props.location.state.weather}
-      />
-    )
-  }
-
+const DetailContainer = props => {
+  return (
+    <Detail
+      title={props.routeParams.city}
+      data={props.location.state.weather}
+    />
+  )
 }
+
+export default DetailContainer
