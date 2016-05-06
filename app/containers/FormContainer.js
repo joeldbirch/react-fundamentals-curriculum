@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Form from '../components/Form'
+import api from '../helpers/api'
 
 class FormContainer extends Component {
 
@@ -12,7 +13,9 @@ class FormContainer extends Component {
 
   handleSubmit (e) {
     e.preventDefault()
-    console.log(this.state.location)
+    api.getCurrentCityWeather(this.state.location).then(function (result) {
+      console.log(result.data)
+    })
   }
 
   handleChange (input) {
