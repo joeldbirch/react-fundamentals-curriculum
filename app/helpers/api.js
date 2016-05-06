@@ -12,10 +12,7 @@ const helpers = {
   },
 
   getCurrentCityWeather (location) {
-    // get current weather for city via API
-    // http://api.openweathermap.org/data/2.5/weather?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY
-    // my API key is: c4e386d5aa9717b232a9d0488d492818
-    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&type=accurate&APPID=${apiKey}`)
+    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&type=accurate&APPID=${apiKey}`)
   }
 
 }
