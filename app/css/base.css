@@ -30,8 +30,18 @@ html, body {
   margin: 0;
   background: transparent;
   -webkit-appearance: none;
+  cursor: pointer;
 }
 .button::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+.button:focus, .button:hover{
+  -webkit-filter: brightness(1.05);
+  filter: brightness(1.05);
+}
+.button:active {
+  -webkit-filter: brightness(.93);
+  filter: brightness(.93);
 }
