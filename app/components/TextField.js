@@ -6,7 +6,7 @@ const TextField = props => {
     borderRadius: '5px',
     fontSize: '.875em',
     padding: '1ex .5em',
-    textAlign: 'center',
+    textAlign: props.align,
     width: '12em'
   }
 
@@ -26,11 +26,13 @@ const TextField = props => {
 
 TextField.propTypes = {
   placeholder: React.PropTypes.string,
-  handleChange: React.PropTypes.func
+  handleChange: React.PropTypes.func,
+  align: React.PropTypes.oneOf(['left', 'center', 'right'])
 }
 
 TextField.defaultProps = {
-  placeholder: ''
+  placeholder: '',
+  align: 'left'
 }
 
 export default TextField

@@ -15,6 +15,7 @@ const Form = props => {
         <TextField
           placeholder='eg. Melbourne, Victoria'
           handleChange={props.handleChange}
+          align={props.layout === 'column' ? 'center' : 'left'}
         />
         <ButtonContainer type='submit'>
           Get Weather
