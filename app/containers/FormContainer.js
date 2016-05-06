@@ -4,8 +4,8 @@ import api from '../helpers/api'
 
 class FormContainer extends Component {
 
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       city: ''
     }
@@ -13,9 +13,7 @@ class FormContainer extends Component {
 
   handleSubmit (e) {
     e.preventDefault()
-    api.getCurrentCityWeather(this.state.city).then(function (result) {
-      this.context.router.push(`/forecast/${this.state.city}`)
-    }.bind(this))
+    this.context.router.push(`/forecast/${this.state.city}`)
   }
 
   handleChange (input) {
