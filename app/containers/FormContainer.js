@@ -7,20 +7,20 @@ class FormContainer extends Component {
   constructor () {
     super()
     this.state = {
-      location: ''
+      city: ''
     }
   }
 
   handleSubmit (e) {
     e.preventDefault()
-    api.getCurrentCityWeather(this.state.location).then(function (result) {
+    api.getCurrentCityWeather(this.state.city).then(function (result) {
       console.log(result.data)
     })
   }
 
   handleChange (input) {
     this.setState({
-      location: input
+      city: input
     })
   }
 
