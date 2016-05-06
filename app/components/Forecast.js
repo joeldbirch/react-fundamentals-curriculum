@@ -6,7 +6,7 @@ const Forecast = props => {
     wrapper: {
       padding: '2rem 1em'
     },
-    details: {
+    forecast: {
       display: (props.loading) ? 'none' : 'block',
       margin: '2rem 0'
     },
@@ -20,7 +20,7 @@ const Forecast = props => {
   return (
     <div style={styles.wrapper}>
       <h1 className='alpha'>{props.title}</h1>
-      <div aria-live={(props.loading) ? null : 'polite'} className='details' style={styles.details}>
+      <div aria-live={(props.loading) ? null : 'polite'} className='forecast' style={styles.forecast}>
         <Subhead>Select a day</Subhead>
         <div style={styles.days}>
           {props.children}

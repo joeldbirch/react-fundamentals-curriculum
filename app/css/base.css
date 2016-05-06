@@ -26,6 +26,7 @@ html, body {
 /* unstyle buttons */
 
 button, .button {
+  font-size: 1em;
   border: none;
   padding: 0;
   margin: 0;

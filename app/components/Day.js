@@ -3,7 +3,8 @@ import Subhead from './Subhead'
 import utils from '../helpers/utils'
 
 const Day = props => {
-  const weather = props.data.weather[0]
+  const data = props.data
+  const weather = data.weather[0]
 
   const styles = {
     wrapper: {
@@ -16,20 +17,21 @@ const Day = props => {
       textDecoration: 'none'
     },
     icon: {
-      minHeight: '7em'
+      minHeight: '8em'
     }
   }
 
   return (
-    <button style={styles.wrapper}>
+    <button onClick={props.handleClick} style={styles.wrapper}>
       <img style={styles.icon} src={`./app/images/weather-icons/${weather.icon}.svg`} alt={weather.description} />
-      <Subhead>{utils.getDate(props.data.dt)}</Subhead>
+      <Subhead>{utils.getDate(data.dt)}</Subhead>
     </button>
   )
 }
 
 Day.propTypes = {
-  data: React.PropTypes.object.isRequired
+  data: React.PropTypes.object.isRequired,
+  handleClick: React.PropTypes.func.isRequired
 }
 
 export default Day

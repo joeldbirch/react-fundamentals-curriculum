@@ -31,17 +31,26 @@ export default class ForecastContainer extends Component {
   getDays () {
     if (!this.state.isLoading) {
       return this.state.forecast.list.map((day) => {
-        console.log(day)
         return (
           <Day
             key={day.dt}
             data={day}
+            handleClick={this.handleDayClick.bind(this, day)}
           />
         )
       })
     } else {
       return null
     }
+  }
+
+  handleDayClick (weather) {
+    this.context.router.push({
+      pathname: `/detail/${this.state.forecast.city.name}`,
+      state: {
+        weather: weather
+      }
+    })
   }
 
   render () {
