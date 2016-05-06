@@ -57,7 +57,7 @@ export default class ForecastContainer extends Component {
     return (
       <Forecast
         title={(this.state.isLoading) ? 'Loading…' : this.state.forecast.city.name}
-        loading={this.state.isLoading}>
+        isLoading={this.state.isLoading}>
         {this.getDays()}
       </Forecast>
     )
