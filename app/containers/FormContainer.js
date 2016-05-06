@@ -3,13 +3,22 @@ import Form from '../components/Form'
 
 class FormContainer extends Component {
 
+  constructor () {
+    super()
+    this.state = {
+      location: ''
+    }
+  }
+
   handleSubmit (e) {
     e.preventDefault()
-    console.log('submitted')
+    console.log(this.state.location)
   }
 
   handleChange (input) {
-    console.log(input)
+    this.setState({
+      location: input
+    })
   }
 
   render () {
