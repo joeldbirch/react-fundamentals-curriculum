@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Form from '../components/Form'
-import api from '../helpers/api'
 
 class FormContainer extends Component {
 
