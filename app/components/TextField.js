@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TextField = ({ placeholder }) => {
+const TextField = props => {
   const style = {
     border: '1px solid lightgrey',
     borderRadius: '5px',
@@ -9,16 +9,24 @@ const TextField = ({ placeholder }) => {
     textAlign: 'center',
     width: '12em'
   }
+
+  const handleChange = function (e) {
+    props.handleChange(e.target.value)
+  }
+
   return (
     <input
       style={style}
       type='text'
-      placeholder={placeholder} />
+      placeholder={props.placeholder}
+      onChange={handleChange}
+    />
   )
 }
 
 TextField.propTypes = {
-  placeholder: React.PropTypes.string
+  placeholder: React.PropTypes.string,
+  handleChange: React.PropTypes.func
 }
 
 TextField.defaultProps = {

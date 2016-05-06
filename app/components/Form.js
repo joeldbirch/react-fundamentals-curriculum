@@ -10,9 +10,12 @@ const Form = props => {
   }
 
   return (
-    <form style={props.style}>
+    <form style={props.style} onSubmit={props.onSubmit}>
       <div style={formContent}>
-        <TextField placeholder='eg. Melbourne, Victoria' />
+        <TextField
+          placeholder='eg. Melbourne, Victoria'
+          handleChange={props.handleChange}
+        />
         <ButtonContainer type='submit'>
           Get Weather
         </ButtonContainer>
@@ -23,7 +26,8 @@ const Form = props => {
 
 Form.propTypes = {
   layout: React.PropTypes.oneOf(['row', 'column']),
-  style: React.PropTypes.object
+  style: React.PropTypes.object,
+  onSubmit: React.PropTypes.func.isRequired
 }
 
 module.exports = Form
