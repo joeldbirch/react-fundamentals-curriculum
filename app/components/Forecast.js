@@ -1,12 +1,31 @@
 import React from 'react'
+import Subhead from './Subhead'
 
 const Forecast = props => {
-  const style = {
-    padding: '2rem 1em'
+  const styles = {
+    wrapper: {
+      padding: '2rem 1em'
+    },
+    details: {
+      display: (props.loading) ? 'none' : 'block',
+      margin: '2rem 0'
+    },
+    days: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      margin: '4rem 0'
+    }
   }
+
   return (
-    <div style={style}>
+    <div style={styles.wrapper}>
       <h1 className='alpha'>{props.title}</h1>
+      <div aria-live={(props.loading) ? null : 'polite'} className='details' style={styles.details}>
+        <Subhead>Select a day</Subhead>
+        <div style={styles.days}>
+          {props.children}
+        </div>
+      </div>
     </div>
   )
 }

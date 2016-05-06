@@ -5,11 +5,11 @@ const apiKey = 'c4e386d5aa9717b232a9d0488d492818'
 const helpers = {
 
   getCityForecast (city) {
-    return axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&type=accurate&APPID=${apiKey}&cnt=5`)
+    return axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&type=accurate&APPID=${apiKey}&cnt=5`).catch( err => console.log(err) )
   },
 
   getCurrentCityWeather (city) {
-    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&type=accurate&APPID=${apiKey}`)
+    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&type=accurate&APPID=${apiKey}`).catch( err => console.log(err) )
   }
 
 }

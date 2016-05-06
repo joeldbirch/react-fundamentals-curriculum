@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
-import Forecast from '../components/Forecast'
 import api from '../helpers/api'
+import Forecast from '../components/Forecast'
+import Day from '../components/Day'
 
 export default class ForecastContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      loading: true,
-      city: ''
+      isLoading: true,
+      forecast: {}
     }
   }
 
@@ -15,20 +16,41 @@ export default class ForecastContainer extends Component {
     this.getForecast(this.props.routeParams.city)
   }
 
+  componentWillReceiveProps (nextProps) {
+    this.getForecast(nextProps.routeParams.city)
+  }
+
   getForecast (city) {
     api.getCityForecast(city).then(({data}) => {
-      console.log(data)
-      this.state.city = data.city.name
-      this.state.loading = false
+      this.state.forecast = data
+      this.state.isLoading = false
       this.setState(this.state)
     })
+  }
+
+  getDays () {
+    if (!this.state.isLoading) {
+      return this.state.forecast.list.map((day) => {
+        console.log(day)
+        return (
+          <Day
+            key={day.dt}
+            data={day}
+          />
+        )
+      })
+    } else {
+      return null
+    }
   }
 
   render () {
     return (
       <Forecast
-        title={(this.state.loading) ? 'Loading…' : this.state.city}
-      />
+        title={(this.state.isLoading) ? 'Loading…' : this.state.forecast.city.name}
+        loading={this.state.isLoading}>
+        {this.getDays()}
+      </Forecast>
     )
   }
 }
