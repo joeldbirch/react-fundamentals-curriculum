@@ -14,8 +14,8 @@ class FormContainer extends Component {
   handleSubmit (e) {
     e.preventDefault()
     api.getCurrentCityWeather(this.state.city).then(function (result) {
-      console.log(result.data)
-    })
+      this.context.router.push(`/forecast/${this.state.city}`)
+    }.bind(this))
   }
 
   handleChange (input) {
@@ -44,6 +44,10 @@ FormContainer.propTypes = {
 FormContainer.defaultProps = {
   layout: 'column',
   style: null
+}
+
+FormContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
 }
 
 export default FormContainer
