@@ -3,7 +3,6 @@ import Forecast from '../components/Forecast'
 import api from '../helpers/api'
 
 export default class ForecastContainer extends Component {
-
   constructor (props) {
     super(props)
     this.state = {
@@ -17,15 +16,12 @@ export default class ForecastContainer extends Component {
   }
 
   getForecast (city) {
-    api.getCityForecast(city).then( ({data}) => {
+    api.getCityForecast(city).then(({data}) => {
       console.log(data)
       this.state.city = data.city.name
       this.state.loading = false
       this.setState(this.state)
     })
-  }
-
-  getCurrentWeather (city) {
   }
 
   render () {
