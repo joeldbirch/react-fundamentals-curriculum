@@ -1,18 +1,26 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Form from '../components/Form'
 
-export default class FormContainer extends React.Component {
-  static propTypes = {
-    name: React.PropTypes.string,
-  };
+class FormContainer extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  render () {
     return (
-      <Form />
-    );
+      <Form
+        style={this.props.style}
+        layout={this.props.layout}
+      />
+    )
   }
 }
+
+FormContainer.propTypes = {
+  layout: React.PropTypes.oneOf(['row', 'column']),
+  style: React.PropTypes.object
+}
+
+FormContainer.defaultProps = {
+  layout: 'column',
+  style: null
+}
+
+export default FormContainer

@@ -9,4 +9,4 @@ const MainContainer = props => {
   )
 }
 
-module.exports = MainContainer
+export default MainContainer

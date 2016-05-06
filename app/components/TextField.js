@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TextField = props => {
+const TextField = ({ placeholder }) => {
   const style = {
     border: '1px solid lightgrey',
     borderRadius: '5px',
@@ -13,12 +13,16 @@ const TextField = props => {
     <input
       style={style}
       type='text'
-      placeholder={props.placeholder} />
+      placeholder={placeholder} />
   )
+}
+
+TextField.propTypes = {
+  placeholder: React.PropTypes.string
 }
 
 TextField.defaultProps = {
   placeholder: ''
 }
 
-module.exports = TextField
+export default TextField

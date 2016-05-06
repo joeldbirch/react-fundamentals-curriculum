@@ -21,6 +21,10 @@ const Button = props => {
   )
 }
 
+Button.propTypes = {
+  type: React.PropTypes.oneOf(['submit', 'button'])
+}
+
 Button.defaultProps = {
   type: null
 }

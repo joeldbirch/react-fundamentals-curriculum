@@ -16,4 +16,4 @@ const Main = props => {
   )
 }
 
-module.exports = Main
+export default Main

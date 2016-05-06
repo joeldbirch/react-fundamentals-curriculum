@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './Form'
+import FormContainer from '../containers/FormContainer'
 
 const Header = props => {
   const style = {
@@ -28,9 +28,9 @@ const Header = props => {
   return (
     <header style={style.header}>
       <h1 style={style.title}>Should I get up today?</h1>
-      <Form style={style.form} layout='row' />
+      <FormContainer style={style.form} layout='row' />
     </header>
   )
 }
 
-module.exports = Header
+export default Header

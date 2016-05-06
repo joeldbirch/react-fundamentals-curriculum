@@ -8,10 +8,6 @@ import routes from '../config/routes'
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 
-const App = props => {
-  return (
-    routes
-  )
+export default () => {
+  return routes
 }
-
-export default App

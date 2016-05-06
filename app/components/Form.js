@@ -21,9 +21,9 @@ const Form = props => {
   )
 }
 
-Form.defaultProps = {
-  layout: 'column',
-  style: null
+Form.propTypes = {
+  layout: React.PropTypes.oneOf(['row', 'column']),
+  style: React.PropTypes.object
 }
 
 module.exports = Form

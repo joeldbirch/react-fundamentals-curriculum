@@ -28,8 +28,12 @@ const Home = props => {
   )
 }
 
+Home.propTypes = {
+  message: React.PropTypes.string
+}
+
 Home.defaultProps = {
   message: 'Enter a City and State'
 }
 
-module.exports = Home
+export default Home

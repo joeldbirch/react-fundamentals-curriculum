@@ -13,4 +13,4 @@ ButtonContainer.propTypes = {
   type: React.PropTypes.string
 }
 
-module.exports = ButtonContainer
+export default ButtonContainer

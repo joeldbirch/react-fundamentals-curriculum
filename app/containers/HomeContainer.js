@@ -10,4 +10,4 @@ const HomeContainer = props => {
   )
 }
 
-module.exports = HomeContainer
+export default HomeContainer
